@@ -4,7 +4,8 @@
   "description": "Idle Game Server",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.ts",
+    "start": "node build/index.js",
+    "dev": "nodemon src/index.ts",
     "build": "tsc --project ./"
   },
   "repository": {
