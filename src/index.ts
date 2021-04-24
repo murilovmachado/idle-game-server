@@ -12,7 +12,6 @@ const server = http.createServer(app);
 const serverOptions: Partial<ServerOptions> = {
   cors: {
     origin: '*',
-    // origin: ['http://localhost:8080', 'capacitor://localhost', 'http://localhost:8100'],
     credentials: true,
   },
   transports: ['polling', 'websocket'],
@@ -31,5 +30,5 @@ io.on('connection', (socket: any) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
+  console.log(`⚡️[server]: Server is running at port ${PORT}`);
 });
