@@ -40,8 +40,8 @@ permissions:
   - object: /home/ec2-user/idle-game-server/scripts
     pattern: "*.sh"
     # except:
-    # owner:
-    # group:
+    owner: CI-user
+    group: CI-user
     mode: 775
     # acls:
     #   -
