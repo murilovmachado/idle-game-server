@@ -40,8 +40,8 @@ permissions:
   - object: /home/ec2-user/idle-game-server/scripts
     pattern: "*.sh"
     # except:
-    owner: CI-user
-    group: CI-user
+    owner: ec2-user
+    group: ec2-user
     mode: 775
     # acls:
     #   -
@@ -93,13 +93,13 @@ hooks:
   AfterInstall:
     - location: scripts/after-install.sh     
       timeout: 300
-      runas: CI-user
+      runas: ec2-user
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ApplicationStart:
     - location: scripts/application-start.sh     
       timeout: 300
-      runas: CI-user
+      runas: ec2-user
 # During the ValidateService deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   # ValidateService:
