@@ -93,13 +93,13 @@ hooks:
   AfterInstall:
     - location: scripts/after-install.sh     
       timeout: 300
-      runas: ec2-user
+      # runas: ec2-user
 # During the ApplicationStart deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   ApplicationStart:
     - location: scripts/application-start.sh     
       timeout: 300
-      runas: ec2-user
+      # runas: ec2-user
 # During the ValidateService deployment lifecycle event, run the commands 
 #   in the script specified in "location".
   # ValidateService:
